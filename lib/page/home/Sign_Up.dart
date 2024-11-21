@@ -80,6 +80,12 @@ class SignUp extends StatelessWidget {
                 style: TextStyle(fontSize: 12),
                 textAlign: TextAlign.center,
               ),
+              SizedBox(height: 20),
+              Text(
+                'By clicking continue, you agree to our Terms of Service and Privacy Policy.',
+                style: TextStyle(fontSize: 12),
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
         ),
