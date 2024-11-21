@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignUp extends StatelessWidget {
+  const SignUp({super.key});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -9,83 +9,40 @@ class SignUp extends StatelessWidget {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.symmetric(vertical: 90, horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+        appBar: AppBar(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment
+                .spaceEvenly, //Cách này tạo khoảng cách đều giữa "Sign Up", "Log In", và hai bên lề.
             children: [
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Sign Up',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      )),
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Log In',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      )),
-                  SizedBox(height: 20),
-                ],
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 70), //Tạo khoảng trống ở trên Sign Up
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
-              SizedBox(height: 40),
-              Text(
-                'App name',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 70), //Tạo khoảng trống ở trên Log In
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
               SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'Enter your email',
+                  labelText: 'ENTER YOUR EMAIL',
                   border: OutlineInputBorder(),
                 ),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 15),
-                  backgroundColor: Colors.black,
-                ),
-                child: Text('Continue'),
-              ),
-              Divider(height: 40),
-              ElevatedButton.icon(
-                onPressed: () {},
-                icon: Icon(FontAwesomeIcons.google, size: 40),
-                label: Text('Continue with Google'),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-              ),
-              SizedBox(height: 10),
-              ElevatedButton.icon(
-                onPressed: () {},
-                icon: Icon(Icons.apple),
-                label: Text('Continue with Apple'),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'By clicking continue, you agree to our Terms of Service and Privacy Policy.',
-                style: TextStyle(fontSize: 12),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 20),
-              Text(
-                'By clicking continue, you agree to our Terms of Service and Privacy Policy.',
-                style: TextStyle(fontSize: 12),
-                textAlign: TextAlign.center,
-              ),
+              )
             ],
           ),
         ),
